@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 class CustomTextform extends StatefulWidget {
   String? hinttext;
   TextEditingController? mycontroller;
-
   String? title;
   bool obscuretext = false;
   String? Function(String?)? validator;
@@ -65,6 +64,7 @@ class _CustomTextformState extends State<CustomTextform> {
   }
 }
 
+// hfuf
 
 /*
 Widget CustomTextform({
