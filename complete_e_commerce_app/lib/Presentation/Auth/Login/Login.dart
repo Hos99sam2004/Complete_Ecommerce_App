@@ -38,7 +38,7 @@ class _LoginState extends State<Login> {
       }
     if(state is LoginError)
     {
-      Get.snackbar("Error",state.msg ,backgroundColor: Colors.red,colorText: Colors.white ,duration: Duration(milliseconds: 500));
+      Get.snackbar("Error: ",state.msg ,backgroundColor: Colors.red,colorText: Colors.white ,duration: Duration(milliseconds: 500));
     }
   },
   child: Scaffold(
