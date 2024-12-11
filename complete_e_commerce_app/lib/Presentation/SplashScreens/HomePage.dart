@@ -58,13 +58,15 @@ class Homepage extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                defaultbuttom(
-                    text: " Get Started ",
-                    textColor: Colors.white,
-                    ontap: () {
-                      Get.to(() => Splash2());
-                    },
-                    radius: 12)
+                InkWell(
+                  onTap: () {
+                    Get.to(() => Splash2());
+                  },
+                  child: defaultbuttom(
+                      text: " Get Started ",
+                      textColor: Colors.white,
+                      radius: 12),
+                )
               ],
             ),
           ),

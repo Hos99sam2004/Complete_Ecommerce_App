@@ -38,15 +38,28 @@ Widget defaultbuttom({
                   size: 35,
                 )
               : SizedBox(),
-          MaterialButton(
-            onPressed: ontap,
-            child: Text(
-              text!,
-              style: TextStyle(
-                  fontSize: fontsize,
-                  fontWeight: FontWeight.bold,
-                  color: textColor),
-            ),
+          // MaterialButton(
+          //   onPressed: ontap,
+          //   child: Text(
+          //     text!,
+          //     style: TextStyle(
+          //         fontSize: fontsize,
+          //         fontWeight: FontWeight.bold,
+          //         color: textColor),
+          //   ),
+          // ),
+          SizedBox(
+            width: Sisvisible == true? 30 : 0,
+          ),
+          Text(
+            text!,
+            style: TextStyle(
+                fontSize: fontsize,
+                fontWeight: FontWeight.bold,
+                color: textColor),
+          ),
+          SizedBox(
+            width: Pisvisible == true? 30 : 0,
           ),
           Pisvisible == true
               ? Icon(

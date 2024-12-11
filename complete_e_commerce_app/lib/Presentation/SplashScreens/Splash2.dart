@@ -58,13 +58,16 @@ class Splash2 extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                defaultbuttom(
-                    text: " Get Started ",
-                    textColor: Colors.white,
-                    ontap: () {
-                      Get.to(() => const Splash3());
-                    },
-                    radius: 12)
+                InkWell(
+                  onTap: () {
+                    Get.to(() => const Splash3());
+                  },
+                  child: defaultbuttom(
+                      text: " Get Started ",
+                      textColor: Colors.white,
+
+                      radius: 12),
+                )
               ],
             ),
           ),

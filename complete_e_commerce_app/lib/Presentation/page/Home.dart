@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -7,6 +9,22 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Home",
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.notifications),
+              onPressed: () {
+                // Handle notifications click
+                // Get.to.(()=>Login());
+                Get.back(); // Navigate back to login screen
+              },
+            ),
+          ],
+        ),
         bottomNavigationBar: BottomNavigationBar(
           iconSize: 40,
           selectedItemColor: Colors.amberAccent,
