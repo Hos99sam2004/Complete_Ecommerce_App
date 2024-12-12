@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 Widget defaultbuttom({
   @required String? text,
-  @required VoidCallback? ontap,
+  // @required VoidCallback? ontap,
   double width = 380,
   double height = 60,
   double radius = 10,

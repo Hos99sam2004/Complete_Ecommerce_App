@@ -1,5 +1,5 @@
 import 'package:complete_e_commerce_app/Presentation/Auth/Login/Login.dart';
-import 'package:complete_e_commerce_app/Presentation/Auth/Sign_up.dart';
+import 'package:complete_e_commerce_app/Presentation/Auth/Sign_up/Sign_up.dart';
 import 'package:complete_e_commerce_app/Presentation/Componanats/Colors.dart';
 import 'package:complete_e_commerce_app/Presentation/Componanats/Defaultbuttom.dart';
 import 'package:complete_e_commerce_app/Presentation/SplashScreens/HomePage.dart';
@@ -98,17 +98,19 @@ class AuthWelcome extends StatelessWidget {
                               MaterialPageRoute(
                                   builder: (context) => SignUp()));
                         },
-                        child: defaultbuttom(
-                            textColor: Colors.white,
-                            text: "Create Account",
-                            ontap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => SignUp()));
-                            },
-                            Sisvisible: true,
-                            suffixicon: Icons.account_circle_outlined),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SignUp()));
+                          },
+                          child: defaultbuttom(
+                              textColor: Colors.white,
+                              text: "Create Account",
+                              Sisvisible: true,
+                              suffixicon: Icons.account_circle_outlined),
+                        ),
                       ),
                       // SizedBox(height: 17),
                       Row(
