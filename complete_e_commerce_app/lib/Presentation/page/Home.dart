@@ -1,3 +1,4 @@
+import 'package:complete_e_commerce_app/Presentation/Auth/Login/Login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -20,25 +21,25 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 // Handle notifications click
                 // Get.to.(()=>Login());
-                Get.back(); // Navigate back to login screen
+                Get.to(()=> Login()) ;// Navigate back to login screen
               },
             ),
           ],
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          iconSize: 40,
-          selectedItemColor: Colors.amberAccent,
-          items: [
-            const BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: "*",
-            ),
-            const BottomNavigationBarItem(
-                icon: Icon(Icons.person_2_outlined), label: "**"),
-            const BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_cart_outlined), label: "***"),
-          ],
-        ),
+        // bottomNavigationBar: BottomNavigationBar(
+        //   iconSize: 40,
+        //   selectedItemColor: Colors.amberAccent,
+        //   items: [
+        //     const BottomNavigationBarItem(
+        //       icon: Icon(Icons.home),
+        //       label: "*",
+        //     ),
+        //     const BottomNavigationBarItem(
+        //         icon: Icon(Icons.person_2_outlined), label: "**"),
+        //     const BottomNavigationBarItem(
+        //         icon: Icon(Icons.shopping_cart_outlined), label: "***"),
+        //   ],
+        // ),
         body: Padding(
           padding: const EdgeInsets.all(20.0),
           child: ListView(
@@ -71,6 +72,7 @@ class HomeScreen extends StatelessWidget {
                       )),
                 ],
               ),
+              SearchBar(onTap: (){},leading: IconButton(onPressed: (){}, icon: Icon(Icons.search),selectedIcon: Icon(Icons.menu), ),),
             ],
           ),
         ),

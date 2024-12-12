@@ -1,6 +1,6 @@
 import 'package:complete_e_commerce_app/Presentation/Auth/Auth_Welcome.dart';
 import 'package:complete_e_commerce_app/Presentation/Auth/Login/Cubit/login_cubit.dart';
-import 'package:complete_e_commerce_app/Presentation/Auth/Sign_up.dart';
+import 'package:complete_e_commerce_app/Presentation/Auth/Sign_up/Sign_up.dart';
 import 'package:complete_e_commerce_app/Presentation/Auth/Test.dart';
 import 'package:complete_e_commerce_app/Presentation/Componanats/Colors.dart';
 import 'package:complete_e_commerce_app/Presentation/Componanats/Defaultbuttom.dart';
@@ -34,7 +34,7 @@ class _LoginState extends State<Login> {
     if(state is LoginSuccess)
       {
 
-       state.msg!="This credentials does not meet any of our records, please make sure you have entered the right credentials" ?Get.offAll( ()=> const HomeScreen() ): Get.snackbar("Error",state.msg,backgroundColor: Colors.red,colorText: Colors.white ); ;
+       state.msg!="This credentials does not meet any of our records, please make sure you have entered the right credentials" ?Get.to( ()=> const HomeScreen() ): Get.snackbar("Error",state.msg,backgroundColor: Colors.red,colorText: Colors.white ); ;
       }
     if(state is LoginError)
     {
@@ -164,6 +164,7 @@ class _LoginState extends State<Login> {
                                       onChanged: (value) {
                                         setState(() {
                                           val = value;
+                                          Get.to(()=>HomeScreen());
                                         });
                                       },
                                     ),
@@ -225,7 +226,7 @@ class _LoginState extends State<Login> {
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                                builder: (context) => const Test()));
+                                                builder: (context) => const SignUp()));
                                       },
                                       child: const Text(
                                         "Sign Up",
