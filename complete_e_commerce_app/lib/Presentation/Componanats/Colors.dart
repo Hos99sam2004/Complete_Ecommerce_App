@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 Color backgraund1 = const Color(0xFFFFFFFF);
-Color backgraund2 = const Color(0xFFfF4F5F9);
+Color backgraund2 = const Color(0xFFF4F5F9);
 Color backgraund3 = const Color(0xFFF5F5F5);
 Color text1 = const Color(0xFF868889);
 Color text2 = const Color(0xFF000000);
