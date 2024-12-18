@@ -1,5 +1,6 @@
 import 'package:complete_e_commerce_app/Presentation/Auth/Login/Cubit/login_cubit.dart';
 import 'package:complete_e_commerce_app/Presentation/Auth/Sign_up/Cubit/sign_cubit.dart';
+import 'package:complete_e_commerce_app/Presentation/Home_page/Cubit/home_cubit.dart';
 // import 'package:complete_e_commerce_app/Presentation/Helper/Hive_Helpers.dart';
 import 'package:complete_e_commerce_app/Presentation/SplashScreens/HomePage.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +29,8 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider<SignCubit>(
           create: (context)=>SignCubit(),
+        ),BlocProvider<HomeCubit>(
+          create: (context)=>HomeCubit()..getbanner()..getCatagorieList()..getProducts()..otherProducts()
         ),
       ],
       child: const GetMaterialApp(
