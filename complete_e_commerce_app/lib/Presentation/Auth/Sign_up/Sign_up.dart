@@ -4,9 +4,11 @@ import 'package:complete_e_commerce_app/Presentation/Auth/Sign_up/Cubit/sign_cub
 import 'package:complete_e_commerce_app/Presentation/Componanats/Colors.dart';
 import 'package:complete_e_commerce_app/Presentation/Componanats/Defaultbuttom.dart';
 import 'package:complete_e_commerce_app/Presentation/Componanats/TextFormField.dart';
+import 'package:complete_e_commerce_app/Presentation/Home_page/Screens/Home.dart';
+// import 'package:complete_e_commerce_app/Presentation/Home_page/Widgets/Home.dart';
 import 'package:complete_e_commerce_app/Presentation/SplashScreens/HomePage.dart';
 import 'package:complete_e_commerce_app/Presentation/SplashScreens/Splash5.dart';
-import 'package:complete_e_commerce_app/Presentation/page/Home.dart';
+// import 'package:complete_e_commerce_app/Presentation/page/Home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
@@ -34,7 +36,7 @@ class _SignUpState extends State<SignUp> {
         {
           Get.snackbar("Success: ",state.msg ,backgroundColor: Colors.green,colorText: Colors.white ,duration: Duration(milliseconds: 500));
 
-        Get.to( ()=> const HomeScreen() ) ;
+        Get.to( ()=>  HomeScreen() ) ;
         }
         if(state is SignError)
         {
